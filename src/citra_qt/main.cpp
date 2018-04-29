@@ -943,7 +943,7 @@ void GMainWindow::OnStopGame() {
 
 void GMainWindow::OnReloadLastGame() {
     if (UISettings::values.recent_files.size() > 0) {
-        BootGame(UISettings::values.recent_files.last());
+        BootGame(QString(UISettings::values.recent_files.first()));
     }
 }
 
