@@ -171,6 +171,7 @@ private slots:
     void OnCheckForUpdates();
     void OnOpenUpdater();
     void OnLanguageChanged(const QString& locale);
+    void OnReloadLastGame();
 
 private:
     void UpdateStatusBar();
