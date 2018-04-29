@@ -317,9 +317,9 @@ void GMainWindow::InitializeHotkeys() {
     connect(GetHotkey("Main Window", "Start Emulation", this), &QShortcut::activated, this,
             &GMainWindow::OnStartGame);
     connect(GetHotkey("Main Window", "Stop Emulation", this), &QShortcut::activated, this,
-        &GMainWindow::OnStopGame);
+            &GMainWindow::OnStopGame);
     connect(GetHotkey("Main Window", "Reload Last Game", this), &QShortcut::activated, this,
-        &GMainWindow::OnReloadLastGame);
+            &GMainWindow::OnReloadLastGame);
     connect(GetHotkey("Main Window", "Swap Screens", render_window), &QShortcut::activated,
             ui.action_Screen_Layout_Swap_Screens, &QAction::trigger);
     connect(GetHotkey("Main Window", "Toggle Screen Layout", render_window), &QShortcut::activated,
