@@ -936,12 +936,15 @@ void GMainWindow::OnPauseGame() {
 }
 
 void GMainWindow::OnStopGame() {
-    ShutdownGame();
+    if (emulation_running) {
+        ShutdownGame();
+    }
 }
 
 void GMainWindow::OnReloadLastGame() {
-    if (UISettings::values.recent_files.size() > 0)
+    if (UISettings::values.recent_files.size() > 0) {
         BootGame(UISettings::values.recent_files.last());
+    }
 }
 
 void GMainWindow::OnMenuReportCompatibility() {
