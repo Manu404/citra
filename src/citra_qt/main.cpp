@@ -300,7 +300,7 @@ void GMainWindow::InitializeHotkeys() {
     RegisterHotkey("Main Window", "Load File", QKeySequence::Open);
     RegisterHotkey("Main Window", "Start Emulation");
     RegisterHotkey("Main Window", "Stop Emulation", QKeySequence("CTRL+F4"));
-    RegisterHotkey("Main Window", "Reload Last File", QKeySequence("CTRL+F5"));
+    RegisterHotkey("Main Window", "Reload Last Game", QKeySequence("CTRL+F5"));
     RegisterHotkey("Main Window", "Swap Screens", QKeySequence("F9"));
     RegisterHotkey("Main Window", "Toggle Screen Layout", QKeySequence("F10"));
     RegisterHotkey("Main Window", "Fullscreen", QKeySequence::FullScreen);
@@ -318,7 +318,7 @@ void GMainWindow::InitializeHotkeys() {
             &GMainWindow::OnStartGame);
     connect(GetHotkey("Main Window", "Stop Emulation", this), &QShortcut::activated, this,
         &GMainWindow::OnStopGame);
-    connect(GetHotkey("Main Window", "Reload Last File", this), &QShortcut::activated, this,
+    connect(GetHotkey("Main Window", "Reload Last Game", this), &QShortcut::activated, this,
         &GMainWindow::OnReloadLastGame);
     connect(GetHotkey("Main Window", "Swap Screens", render_window), &QShortcut::activated,
             ui.action_Screen_Layout_Swap_Screens, &QAction::trigger);
